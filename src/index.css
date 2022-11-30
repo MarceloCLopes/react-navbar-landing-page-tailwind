@@ -1,0 +1,181 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  ul {
+    @apply list-none;
+  }
+
+  a {
+    @apply no-underline text-white;
+  }
+
+  body {
+    @apply text-[#333] font-[Montserrat] leading-6;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply w-full py-2 px-0 rounded border border-solid border-primary bg-primary text-white cursor-pointer hover:bg-secondary hover:border hover:border-solid hover:border-secondary;
+  }
+
+  .input {
+    @apply block w-full my-5 mx-0 p-2 border border-solid border-lightgrey bg-white rounded;
+  }
+
+  .outline {
+    background-image: linear-gradient(
+        to left,
+        rgba(73, 50, 173, 0.5),
+        rgba(73, 50, 173, 0.9)
+      ),
+      url("https://images.unsplash.com/photo-1562071707-7249ab429b2a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80");
+  }
+
+  .link {
+    @apply text-lightgrey text-sm py-[0.4rem] px-0 block;
+  }
+
+  .footer .container {
+    grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
+  }
+}
+
+/*---------- Navbar -----------*/
+@media screen and (max-width: 940px) {
+  .nav-menu {
+    @apply fixed -left-full top-[100px] flex-col justify-center bg-darkgrey w-full h-full text-center transition-[400];
+  }
+
+  .nav-menu.active {
+    @apply left-0;
+  }
+
+  .nav-item {
+    @apply m-6 text-3xl justify-center;
+  }
+
+  .hamburger {
+    @apply flex;
+  }
+}
+
+/*---------- Hero -----------*/
+@media screen and (max-width: 940px) {
+  .hero {
+    @apply h-auto w-full;
+  }
+
+  .hero .container {
+    @apply py-0 px-4;
+  }
+
+  .hero .content {
+    @apply grid-cols-1;
+  }
+
+  .hero .col-1 {
+    @apply h-[90vh] p-1 max-w-full;
+  }
+
+  .hero h1 {
+    @apply text-[32px];
+  }
+
+  .hero .col-2 {
+    @apply hidden;
+  }
+}
+
+/*---------- Pricing -----------*/
+@media screen and (max-width: 960px) {
+  .top-content {
+    @apply grid-cols-[1fr];
+  }
+
+  .bottom-content {
+    @apply hidden;
+  }
+
+  .pricing .top-content h2 {
+    @apply text-[32px];
+  }
+}
+
+/*---------- Testimonials -----------*/
+@media screen and (max-width: 960px) {
+  .testimonials {
+    @apply my-4 mx-0;
+  }
+
+  .content {
+    @apply max-w-full;
+  }
+}
+
+/*---------- Faq -----------*/
+@media screen and (max-width: 960px) {
+  .faq {
+    @apply my-4 mx-0 h-0;
+  }
+
+  .container {
+    @apply grid-cols-[1fr];
+  }
+}
+
+/*---------- Contact -----------*/
+@media screen and (max-width: 960px) {
+  .contact {
+    @apply my-4 mx-0;
+  }
+
+  .contact .container {
+    @apply flex-col;
+  }
+
+  .contact .col-1 {
+    @apply py-0 px-4;
+  }
+
+  .contact .col-2 {
+    @apply p-4;
+  }
+}
+
+/*---------- Contact -----------*/
+@media screen and (max-width: 960px) {
+  .footer .container {
+    @apply flex flex-wrap justify-between p-4;
+  }
+
+  .footer .solutions,
+  .support {
+    @apply hidden;
+  }
+
+  .footer .col-subscribe {
+    @apply m-8 text-center;
+  }
+
+  .footer .subscribe {
+    @apply flex-col;
+  }
+
+  .footer input {
+    @apply w-full;
+  }
+  .footer button {
+    @apply w-full;
+  }
+
+  .footer-buttom .content {
+    @apply p-4 justify-center;
+  }
+
+  .footer-buttom .right {
+    @apply hidden;
+  }
+}
